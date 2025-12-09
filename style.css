@@ -1,0 +1,392 @@
+:root {
+    /* Paleta de colores extraída de la imagen */
+    --color-bg-light: #ffffff;
+    --color-bg-dark: #0b2b36;
+    /* Azul petróleo oscuro */
+    --color-text-main: #333333;
+    --color-text-muted: #666666;
+    --color-text-light: #ffffff;
+    --color-accent: #8e2b43;
+    /* Rojo vino/Burgundy */
+    --color-gold: #c5a059;
+
+    /* Tipografías */
+    --font-script: 'Great Vibes', cursive;
+    /* Para nombres */
+    --font-serif: 'Cinzel', serif;
+    /* Para títulos elegantes */
+    --font-sans: 'Lato', sans-serif;
+    /* Para cuerpo de texto */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: var(--font-sans);
+    color: var(--color-text-main);
+}
+
+/* Contenedor principal estilo móvil */
+.invitation-container {
+    max-width: 480px;
+    /* Ancho típico de móvil */
+    margin: 0 auto;
+    background: var(--color-bg-light);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+
+
+.intro-text {
+    font-family: var(--font-serif);
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    color: var(--color-text-muted);
+}
+
+.couple-names {
+    font-family: var(--font-script);
+    font-size: 3.5rem;
+    color: var(--color-bg-dark);
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.couple-names .amp {
+    font-size: 2rem;
+    vertical-align: middle;
+    color: var(--color-accent);
+}
+
+.date-highlight time {
+    display: block;
+    font-family: var(--font-serif);
+    color: var(--color-text-muted);
+}
+
+.date-highlight .date {
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.floral-decoration img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* --- SECCIÓN 2: MULTIMEDIA (Fondo Oscuro) --- */
+.multimedia-section {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    /* Ligero borde redondeado arriba si se desea */
+}
+
+.photo-frame {
+    margin-bottom: 30px;
+}
+
+.photo-frame img {
+    width: 100%;
+    border-radius: 20px;
+    /* Bordes redondeados de la foto */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* Reproductor UI */
+.music-player {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.progress-fill {
+    width: 30%;
+    /* Simulado */
+    height: 100%;
+    background: var(--color-text-light);
+    border-radius: 2px;
+}
+
+.progress-handle {
+    width: 12px;
+    height: 12px;
+    background: var(--color-text-light);
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: 30%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.controls button,
+.favorite-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.controls .play-btn {
+    font-size: 3rem;
+    /* Botón play más grande */
+}
+
+.favorite-btn {
+    margin-top: 15px;
+    float: right;
+}
+
+.bible-verse {
+    font-style: italic;
+    font-family: var(--font-serif);
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+.bible-verse cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* --- SECCIÓN 3: DETALLES --- */
+.details-section {
+    background: #fff;
+    /* Vuelve a blanco */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.countdown-container {
+    margin-bottom: 40px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin: 10px 0;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-unit small {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-family: var(--font-sans);
+}
+#segundos{
+    color:rgba(135,37,37,0.536);
+}
+/* Calendario */
+.calendar-wrapper h3 {
+    background: #fdf2f4;
+    /* Fondo rosado muy suave */
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-family: var(--font-serif);
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    max-width: 300px;
+    margin: 0 auto 40px auto;
+}
+
+.calendar-grid span {
+    padding: 5px;
+}
+
+.special-day {
+    position: relative;
+    color: var(--color-accent);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special-day i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    color: rgba(142, 43, 67, 0.2);
+    /* Corazón de fondo */
+    z-index: -1;
+}
+
+/* Ubicación y Botones */
+.location-info h3,
+.rsvp-info h3 {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--color-text-main);
+    text-transform: uppercase;
+}
+
+.location-icon {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--color-text-main);
+}
+
+address {
+    font-style: normal;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+/* --- SECCIÓN 1: HERO --- */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    /* width: 20rem; */
+}
+.main-circle {
+    border-radius: 50%;
+    top: -6rem;
+    min-height: 60vh;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    padding-top: 5rem;
+    /* height: 70%; */
+    z-index: 10;
+    max-width: 20rem;
+    /* margin-left: 5.4rem; */
+}
+
+.floral-decoration.bottom {
+    position: relative;
+    top: -10rem;
+}
+
+.floral-decoration{
+    /* width: 20rem; */
+}
+.main-circle * {
+    margin-bottom: 4rem;
+}
+.verse-container img{
+    width: 7rem;
+    /* height: 5rem; */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    /* Bordes muy redondeados */
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-secondary {
+    background-color: #7f8c8d;
+    /* Gris azulado */
+    color: white;
+}
+
+.btn-primary {
+    background-color: #6c7a89;
+    /* Otro tono de gris azulado según imagen */
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* --- VISTA DE ESCRITORIO (TRÍPTICO) --- */
+@media (min-width: 1024px) {
+    .main-circle {}
+    .invitation-container {
+        max-width: 1200px;
+        /* Hacemos el contenedor ancho */
+        display: flex;
+        /* Los ponemos uno al lado del otro */
+        flex-direction: row;
+        align-items: stretch;
+        padding: 20px;
+        gap: 20px;
+        /* Espacio entre paneles */
+    }
+
+    /* Hacemos que cada sección ocupe el mismo ancho (1/3) */
+    .hero-section,
+    .multimedia-section,
+    .details-section {
+        flex: 1;
+        width: 33%;
+        border-radius: 20px;
+        /* Bordes redondeados para que parezcan tarjetas */
+        overflow: hidden;
+        /* Para que el contenido no se salga */
+        height: auto;
+        /* Altura automática */
+    }
+
+    /* Ajuste específico para la sección central oscura */
+    .multimedia-section {
+        border-radius: 20px;
+    }
+}
