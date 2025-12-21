@@ -192,6 +192,7 @@ body {
 
 /* --- SECCIÓN 2: MULTIMEDIA (Fondo Oscuro) --- */
 .multimedia-section {
+    display: grid;
     background-color: rgb(0, 43, 59);
     color: var(--color-text-light);
     padding: 40px 30px;
@@ -300,6 +301,7 @@ body {
 .final-secondary-text {
     font-family: 'fuente6';
     font-size: 0.9rem;
+    line-height: 1.5;
     color: rgb(124, 124, 124);
 }
 
@@ -441,17 +443,36 @@ address {
 .main-circle {
     border-radius: 50%;
     top: -6rem;
-    /* min-height: 60vh; */
     color: black;
     margin: auto;
     background-color: white;
     position: relative;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    /* height: 70%; */
+    /* padding-top: 2rem; */
+    /* padding-bottom: 2rem; */
     z-index: 10;
     max-width: 20rem;
-    /* margin-left: 5.4rem; */
+    min-height: 67vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+/* 1ra fila: Alineación abajo */
+.main-circle p:nth-child(1) {
+    align-self: end;
+}
+
+/* 2da fila: Alineación al centro */
+.main-circle h1:nth-child(2) {
+    align-self: center;
+}
+
+/* 3ra fila (última): Alineación abajo */
+.main-circle div:nth-child(3) {
+    align-self: start;
+    top: -25px;
+    position: relative;
 }
 
 .secondary-text {
@@ -468,12 +489,9 @@ address {
     /* width: 20rem; */
 }
 
-.main-circle * {
-    margin-bottom: 4rem;
-}
-
 .verse-container {
     text-align: center;
+    align-self: end;
 }
 
 .verse-container img {
@@ -520,9 +538,17 @@ address {
     transform: translateY(-2px);
 }
 
+.detail-content{
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
 /* --- VISTA DE ESCRITORIO (TRÍPTICO) --- */
 @media (min-width: 1024px) {
-    .main-circle {}
+    .main-circle {
+        min-height: 67%;
+    }
 
     .invitation-container {
         max-width: 1200px;
@@ -560,7 +586,7 @@ address {
 
 @media (max-width: 1023px) {
     .invitation-container>* {
-        min-height: 100vh;
+        height: 100vh;
     }
 
     html {
