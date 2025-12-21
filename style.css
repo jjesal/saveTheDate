@@ -587,6 +587,7 @@ address {
 @media (max-width: 1023px) {
     .invitation-container>* {
         height: 100vh;
+        min-height: 100vh;
     }
 
     html {
