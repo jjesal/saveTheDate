@@ -357,7 +357,7 @@ body {
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* gap: 10px; */
+    gap: 6px;
     font-family: var(--font-serif);
     font-size: 0.8rem;
     color: var(--color-text-muted);
@@ -515,9 +515,28 @@ address {
     position: relative;
     z-index: 10;
 }
+.special-day {
+    position: relative; /* Permite posicionar el corazón respecto al número */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-weight: bold;
+    color: #333; /* Color del número */
+}
 
+.special-day i {
+    position: absolute; /* Saca al corazón del flujo normal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Lo centra perfectamente */
+    font-size: 2.2rem; /* Ajusta el tamaño para que cubra el número */
+    color: transparent; /* Fondo transparente */
+    -webkit-text-stroke: 1px #7d5d5d; /* Crea el borde (outline) del corazón */
+    z-index: -1; /* Lo envía detrás del número */
+}
 .fa-solid.fa-heart {
-    font-size: 2rem;
+    font-size: 1.7rem;
     justify-content: right;
     margin-bottom: 0.6rem;
 }
