@@ -379,25 +379,6 @@ body {
     font-weight: bold;
 }
 
-.special-day {
-    position: relative;
-    color: var(--color-accent);
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.special-day i {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.8rem;
-    color: rgba(142, 43, 67, 0.2);
-    /* Corazón de fondo */
-    z-index: -1;
-}
 
 /* Ubicación y Botones */
 .location-info h3,
@@ -530,6 +511,26 @@ address {
     color: transparent; /* Fondo transparente */
     -webkit-text-stroke: 1px #7d5d5d; /* Crea el borde (outline) del corazón */
     z-index: -1; /* Lo envía detrás del número */
+    /* Configuración de la animación */
+    animation: latido 1.2s infinite ease-in-out;
+    transform-origin: center; /* Asegura que crezca desde el centro */
+}
+@keyframes latido {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    15% {
+        transform: translate(-50%, -50%) scale(1.15); /* Primer latido */
+    }
+    30% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    45% {
+        transform: translate(-50%, -50%) scale(1.25); /* Segundo latido más fuerte */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 .fa-solid.fa-heart {
     font-size: 1.7rem;
