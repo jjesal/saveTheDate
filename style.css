@@ -507,33 +507,15 @@ address {
     top: 50%;
     left: 50%;
     margin: 0 !important; 
-    font-size: 1rem !important; 
+    font-size: 1.6rem !important; 
     color: transparent;
     -webkit-text-stroke: 1px #7d5d5d;
     z-index: -1;
     transform: translate(-50%, -50%);
-    animation: latido 1.2s infinite ease-in-out;
     transform-origin: center;
 }
-@keyframes latido {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    15% {
-        transform: translate(-50%, -50%) scale(1.15); /* Primer latido */
-    }
-    30% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    45% {
-        transform: translate(-50%, -50%) scale(1.25); /* Segundo latido más fuerte */
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
 .fa-solid.fa-heart {
-    font-size: 1rem;
+    font-size: 1.6rem;
     justify-content: right;
     margin-bottom: 0.6rem;
 }
