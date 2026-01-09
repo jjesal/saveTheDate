@@ -502,18 +502,18 @@ address {
     color: #333; /* Color del número */
 }
 
-.special-day i {
-    position: absolute; /* Saca al corazón del flujo normal */
+.special-day i.fa-heart {
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Lo centra perfectamente */
-    font-size: 2.2rem; /* Ajusta el tamaño para que cubra el número */
-    color: transparent; /* Fondo transparente */
-    -webkit-text-stroke: 1px #7d5d5d; /* Crea el borde (outline) del corazón */
-    z-index: -1; /* Lo envía detrás del número */
-    /* Configuración de la animación */
+    margin: 0 !important; 
+    font-size: 2.2rem; 
+    color: transparent;
+    -webkit-text-stroke: 1px #7d5d5d;
+    z-index: -1;
+    transform: translate(-50%, -50%);
     animation: latido 1.2s infinite ease-in-out;
-    transform-origin: center; /* Asegura que crezca desde el centro */
+    transform-origin: center;
 }
 @keyframes latido {
     0% {
